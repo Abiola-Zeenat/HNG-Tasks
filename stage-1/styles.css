@@ -1,0 +1,21 @@
+.container{
+  background-color: rgb(228, 223, 218);
+  color:rgba(2, 68, 250, 0.87);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5% ;
+  max-width: 50%;
+  margin: 5% 30%;
+  border-radius: 30px;
+}
+img{
+  width: 50%;
+}
+a{text-decoration: none;}
+h1{
+  font-size: 1.5rem;
+}
+p,a{
+  font-size: 1rem;
+}

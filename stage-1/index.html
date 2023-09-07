@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG Profile</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="name" data-testid="slackUserName">Abiola Abdulsalam</h1>
+      <img
+        src="https://ca.slack-edge.com/T05FFAA91JP-U05REP21TC4-f6bdfff282d9-512"
+        alt="Abiola Abdulsalam"
+        data-testid="slackDisplayImage"
+      />
+      <p id="day" data-testid="currentDayOfTheWeek"></p>
+      <p id="time" data-testid="currentUTCTime"></p>
+      <p id="track" data-testid="myTrack">Track: Frontend</p>
+      <a href="https://github.com/Abiola-Zeenat/HNG-Tasks.git" data-testid="githubURL">GitHub URL</a>
+    </div>
+
+    <script>
+      let day = document.getElementById('day')
+      let currentDay = new Date().getDay();
+      switch (currentDay) {
+        case 1:
+          currentDay='Monday';
+          break;
+          case 2:
+          currentDay='Tuesday';
+          break;
+          case 3:
+          currentDay='Wednesday';
+          break;
+          case 4:
+          currentDay='Thursday';
+          break;
+          case 5:
+          currentDay='Friday';
+          break;
+          case 6:
+          currentDay='Saturday';
+          break;
+          case 7:
+          currentDay='Sunday';
+          break;
+      
+        default: currentDay='Not a valid day'
+          break;
+      }
+      day.innerHTML = `Day: ${currentDay}`;
+      let time = document.getElementById('time')
+      let hour = new Date().getHours();
+      if (hour < 10) {
+        hour = '0'+ hour;
+      }
+      let minute = new Date().getMinutes();
+      if (minute < 10) {
+        minute = '0'+ minute;
+      }
+      let currentUTCTime = `${hour}:${minute}`;
+      time.innerHTML = `Time: ${currentUTCTime}`;
+    </script>
+  </body>
+</html>
