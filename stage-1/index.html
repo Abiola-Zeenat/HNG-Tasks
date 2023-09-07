@@ -17,7 +17,7 @@
       <p id="day" data-testid="currentDayOfTheWeek"></p>
       <p id="time" data-testid="currentUTCTime"></p>
       <p id="track" data-testid="myTrack">Track: Frontend</p>
-      <a href="https://github.com/Abiola-Zeenat/HNG-Tasks.git" data-testid="githubURL">GitHub URL</a>
+      <a href="https://github.com/Abiola-Zeenat/HNG-Tasks/tree/main/stage-1" data-testid="githubURL">GitHub URL</a>
     </div>
 
     <script>
@@ -51,15 +51,7 @@
       }
       day.innerHTML = `Day: ${currentDay}`;
       let time = document.getElementById('time')
-      let hour = new Date().getHours();
-      if (hour < 10) {
-        hour = '0'+ hour;
-      }
-      let minute = new Date().getMinutes();
-      if (minute < 10) {
-        minute = '0'+ minute;
-      }
-      let currentUTCTime = `${hour}:${minute}`;
+      let currentUTCTime = new Date().getTime();
       time.innerHTML = `Time: ${currentUTCTime}`;
     </script>
   </body>
